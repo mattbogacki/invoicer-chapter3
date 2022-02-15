@@ -296,7 +296,7 @@ var oauthCfg = &oauth2.Config{
 
 func (iv *invoicer) getAuthenticate(w http.ResponseWriter, r *http.Request) {
 	//Get the Google URL which shows the Authentication page to the user
-	url := oauthCfg.AuthCodeURL(makeCSRFToken())
+	url := oauthCfg.AuthCodeURL() //makeCSRFToken())
 	//redirect user to that page
 	http.Redirect(w, r, url, http.StatusTemporaryRedirect)
 }
