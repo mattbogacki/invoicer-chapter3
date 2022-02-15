@@ -26,7 +26,6 @@ jobs:
       - run:
           name: Build application container
           command: |
-            ls /go/src/github.com/justinagain/invoicer-chapter3
             echo "github location"
             ls /usr/local/go/src
             go install --ldflags '-extldflags "-static"' github.com/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME};
